@@ -1,7 +1,7 @@
 #include <FastLED.h>
 
-#define LED_PIN     7
-#define NUM_LEDS    300
+#define LED_PIN     13
+#define NUM_LEDS    40
 
 CRGB leds[NUM_LEDS];
 
@@ -13,12 +13,12 @@ void setup() {
 
 void loop() {
 
-  for (int i = 0; i <= 19; i++) {
+  for (int i = 0; i <= NUM_LEDS; i++) {
     leds[i] = CRGB ( 0, 0, 255);
     FastLED.show();
     delay(40);
   }
-  for (int i = 19; i >= 0; i--) {
+  for (int i = NUM_LEDS; i >= 0; i--) {
     leds[i] = CRGB ( 255, 0, 0);
     FastLED.show();
     delay(40);

@@ -1,14 +1,14 @@
 #include "FastLED.h"
 
-#define NUM_LEDS 45
-#define LED_PIN 2
+#define NUM_LEDS 40
+#define LED_PIN 13
 #define COLOR_ORDER GRB
 
 CRGB leds[NUM_LEDS];
 
 void setup() {
   FastLED.addLeds<WS2812, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS);
-  FastLED.setBrightness(brightness);
+//  FastLED.setBrightness(brightness);
   // Set the 45 proximity sensors pins as inputs, from digital pin 3 to pin 48
   for (int pinNo = 0 + 3; pinNo <= 45 + 3; pinNo++) {
     pinMode(pinNo, INPUT);
